@@ -38,7 +38,7 @@
 </head>
 <body>
     <header>
-        <a href="home.php"><button class="btn btn-danger">Back</button></a>
+        <a href="index.php"><button class="btn btn-danger">Back</button></a>
     </header>
     <h1>Serior Staff Login</h1>
     <form action="login1.php" method="POST">

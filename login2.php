@@ -38,7 +38,7 @@
 </head>
 <body>
     <header>
-        <a href="home.php"><button class="btn btn-danger">Back</button></a>
+        <a href="index.php"><button class="btn btn-danger">Back</button></a>
     </header>
     <h1>Store Login</h1>
     <form action="login2.php" method="POST">
@@ -75,7 +75,7 @@
         if($count > 0)
         {   
             $_SESSION['username'] = $_POST['username'];
-            echo'<script language="javascript">alert("Login sucessfully"); window.location="Manage.php";</script>';
+            echo'<script language="javascript">alert("Login sucessfully"); window.location="Store.php";</script>';
         
          }
         else
