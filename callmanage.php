@@ -26,7 +26,7 @@
     <header>
         <p style="color:red; font-size:30px;">Hi <?php echo ($_SESSION['username']); ?></p>
         <a href="logout.php"><button class="btn btn-success">LogOut</button></a>
-        <a href="Manage.php"><button class="btn btn-success">Back</button></a>
+        <a href="Store.php"><button class="btn btn-success">Back</button></a>
     </header>
     <div class="container">
         <table class="table">
