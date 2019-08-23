@@ -34,7 +34,7 @@
 </head>
 <body>
     <header>
-        <p style="color:white; font-size:30px;">Hi <?php echo ($_SESSION['username']); ?></p>
+        <p style="color:red; font-size:30px;">Hi <?php echo ($_SESSION['username']); ?></p>
         <a href="Store.php"><button class="btn btn-success">Back</button></a>
     </header>
         <?php 
