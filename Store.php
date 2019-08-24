@@ -36,7 +36,7 @@
             <th>ID</th>
             <th>Name of product</th>
             <th>Price</th>
-            <td><a href="./add.php"><button class="btn btn-success">Add Product</button></a></td>
+            <td><a href="add.php"><button class="btn btn-success">Add Product</button></a></td>
         </tr>
     <?php require_once "connect.php";
         $sql = "select * from product";
