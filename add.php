@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['username']))
     {
-        header("Location: home.php");
+        header("Location: index.php");
     }
 ?> 
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
         $stmt->execute
         (
             array(
-                'name' => $namepr;
+                'name' => $namepr,
             )
         );
         $count = $stmt->rowCount();
