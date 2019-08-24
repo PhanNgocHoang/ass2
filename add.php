@@ -63,12 +63,29 @@
     {
         $namepr = $_POST['name'];
         $price = $_POST['price'];
-        $sql = "insert into product(namepr, price) values (:name, :price)";
-        $query = $pdo->prepare($sql);
-        $query->bindparam(':name', $namepr);
-        $query->bindparam(':price', $price);
-        $query->execute();
-        echo'<script language="javascript">alert("Add product successfully");</script>';
+        $sql = "SELECT * FROM product where namepr = :name";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute
+        (
+            array(
+                'name' => $namepr;
+            )
+        );
+        $count = $stmt->rowCount();
+        if($count > 0)
+        {   
+           echo'<script language="javascript">alert("Product already exists");</script>';
+            
+        }
+        else
+        {
+            $sql = "insert into product(namepr, price) values (:name, :price)";
+            $query = $pdo->prepare($sql);
+            $query->bindparam(':name', $namepr);
+            $query->bindparam(':price', $price);
+            $query->execute();
+            echo'<script language="javascript">alert("Add product successfully");</script>';
+        }
     }
    ?>
 </body>
