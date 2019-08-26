@@ -39,7 +39,7 @@
     </header>
     <div class="container">
         <h1>Store 1</h1>
-        <form action="capcao.php" method="POST">
+        <form action="Seniorstaff.php" method="POST">
         <table class="table" >
             <tr>
                 <th>id order</th>
@@ -107,7 +107,7 @@
         </form>
         
         <h2>Store 2</h2>
-        <form action="capcao.php" method="POST">
+        <form action="Seniorstaff.php" method="POST">
             <table class="table">
                 <tr>
                     <th>id order</th>
@@ -171,7 +171,7 @@
         </form>
 
         <h3>Store 3</h3>
-        <form action="capcao.php" method="POST">
+        <form action="Seniorstaff.php" method="POST">
         <table class="table">
             <tr>
                 <th>id order</th>
@@ -251,7 +251,7 @@
                 echo"Total sales of all store from: ".$from."To: ".$to." is". " ". array_sum($row);}
         }
     ?>
-        <form action="capcao.php" method = "POST">
+        <form action="Seniorstaff.php" method = "POST">
             <label>From</label>
             <input type="date" name="datefrom">
             <label>To</label>
