@@ -62,7 +62,7 @@
             </div>
             <div>
                 <label>Pass</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter password" value="<?php echo $pass;?>" name="pass" required>
+                <input type="text" class="form-control nhap"  placeholder="Enter password" value="<?php echo $pass;?>" name="pass" required>
             </div>
             <div>
                 <label>Addres</label>
