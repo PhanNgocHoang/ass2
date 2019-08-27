@@ -51,7 +51,7 @@
                 echo "<td>".$row['usernamestore']."</td>";
                 echo "<td>".$row['pass']."</td>";
                 echo "<td>".$row['addres']."</td>";
-                echo "<td><a href=\"editstore.php?id=$row[id]\">Edit</a> | <a href=\"delete1.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                echo "<td><a href=\"editstore.php?id=$row[id]\">Edit</a> | <a href=\"deletestore.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
                 echo "</tr>";
             }
         ?>
