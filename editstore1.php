@@ -13,6 +13,6 @@
      }
      else
      {
-        echo'<script language="javascript">alert("Edit fail");</script>';
+        echo'<script language="javascript">alert("Edit fail"); window.location="managestore.php";</script>';
      }
 ?>  
