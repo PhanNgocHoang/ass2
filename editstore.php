@@ -35,7 +35,7 @@
 <body>
     <header>
         <p style="color:red; font-size:30px;">Hi <?php echo ($_SESSION['username']); ?></p>
-        <a href="Store.php"><button class="btn btn-success">Back</button></a>
+        <a href="managestore.php"><button class="btn btn-success">Back</button></a>
     </header>
         <?php 
         include_once "connect.php";
