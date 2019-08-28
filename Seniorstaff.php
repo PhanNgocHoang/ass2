@@ -85,9 +85,9 @@
             $stmt1 = $pdo->prepare($sql1);
             $stmt1->execute();
             $stmt1->setFetchMode(PDO::FETCH_ASSOC);
-            $result1 = $stmt1->fetchAll();
+            $result1 = $stmt1->fetch();
             foreach ($result1 as $row1) {
-                echo"Total sales from: ".$from1."To: ".$to1." is". " ". array_sum($row1);}
+                echo"Total sales from: ".$from1."To: ".$to1." is". " ". $row1;}
             
         }
         
@@ -151,9 +151,9 @@
             $stmt2 = $pdo->prepare($sql2);
             $stmt2->execute();
             $stmt2->setFetchMode(PDO::FETCH_ASSOC);
-            $result2 = $stmt2->fetchAll();
+            $result2 = $stmt2->fetch();
             foreach($result2 as $row2){
-                echo"Total sales of Store 2 from: ".$from2."To: ".$to2." is". " ". array_sum($row2);}
+                echo"Total sales of Store 2 from: ".$from2."To: ".$to2." is". " ". $row2;}
         }
         ?>
             <tr>
@@ -215,9 +215,9 @@
             $stmt3 = $pdo->prepare($sql3);
             $stmt3->execute();
             $stmt3->setFetchMode(PDO::FETCH_ASSOC);
-            $result3 = $stmt3->fetchAll();
+            $result3 = $stmt3->fetch();
             foreach($result3 as $row3){
-                echo"Total sales of store 3 from: ".$from3."To: ".$to3." is". " ". array_sum($row3);}
+                echo"Total sales of store 3 from: ".$from3."To: ".$to3." is". " ". $row3;}
         }
     ?>
 <tr>
@@ -246,9 +246,9 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $result = $stmt->fetchAll();
+            $result = $stmt->fetch();
             foreach($result as $row){
-                echo"Total sales of all store from: ".$from."To: ".$to." is". " ". array_sum($row);}
+                echo"Total sales of all store from: ".$from."To: ".$to." is". " ". $row;}
         }
     ?>
         <form action="Seniorstaff.php" method = "POST">
