@@ -52,8 +52,11 @@
             <input type="password" class="form-control mb-2 mr-sm-2" id="pwd" name="pass" placeholder="Enter your password" required>
             <label for="store">Adress</label>
             <input type="text" name="store"  class="form-control mb-2 mr-sm-2" placeholder="Enter store's address" required>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone"  class="form-control mb-2 mr-sm-2" placeholder="Enter phone" required>
             <div class ="login">
             <input type="submit" class="btn btn-success login" value="Create" name="create">
+            </div>
         </form>
     </div>
     <?php
@@ -67,11 +70,13 @@
             $username = $_POST['username'];
             $pass = $_POST['pass'];
             $store = $_POST['store'];
-            $sql = "Insert Into store(usernamestore, pass, addres) values(:username, :pass, :addres)";
+            $phone = $_POST['phone'];
+            $sql = "Insert Into store(usernamestore, pass, addres, phone) values(:username, :pass, :addres, :phone)";
             $query = $pdo->prepare($sql);
             $query->bindparam(':username', $username);
             $query->bindparam(':pass', $pass);
             $query->bindparam(':addres', $store);
+            $query->bindparam(':phone', $phone);
             $query->execute();
             echo'<script language="javascript">alert("Create account sucessfully")</script>';
         }
