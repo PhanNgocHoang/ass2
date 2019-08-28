@@ -49,6 +49,7 @@
                 $username = $row['usernamestore'];
                 $pass = $row['pass'];
                 $addres = $row['addres'];
+                $phone = $row['phone'];
             }
         ?>
 
@@ -67,6 +68,10 @@
             <div>
                 <label>Addres</label>
                 <input type="text" class="form-control nhap"  placeholder="Enter addres of store" value="<?php echo $addres;?>" name="addres" required>
+            </div>
+            <div>
+                <label>Phone</label>
+                <input type="text" class="form-control nhap"  placeholder="Enter phone number" value="<?php echo $phone;?>" name="phone" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="edit">Edit</button>
         </form>

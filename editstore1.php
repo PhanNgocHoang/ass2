@@ -4,7 +4,8 @@
      $pass= $_POST['pass'];
      $addres = $_POST['addres'];
      $id = $_POST['id'];
-     $query = "UPDATE store SET usernamestore = '$names', pass= '$pass', addres = '$addres' WHERE id= $id";
+     $phone = $_POST['phone'];
+     $query = "UPDATE store SET usernamestore = '$names', pass= '$pass', addres = '$addres', phone = '$phone' WHERE id= $id";
      $res = $pdo->prepare($query);
      $res->execute();
      if($pdo->exec($query)==TRUE)

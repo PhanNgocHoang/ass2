@@ -36,6 +36,7 @@
         <th>Username</th>
         <th>Password</th>
         <th>Address</th>
+        <th>Phone</th>
         <?php
             require_once "connect.php";
             $sql = "select * from store";
@@ -51,6 +52,7 @@
                 echo "<td>".$row['usernamestore']."</td>";
                 echo "<td>".$row['pass']."</td>";
                 echo "<td>".$row['addres']."</td>";
+                echo "<td>".$row['phone']."</td>";
                 echo "<td><a href=\"editstore.php?id=$row[id]\">Edit</a> | <a href=\"deletestore.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
                 echo "</tr>";
             }
