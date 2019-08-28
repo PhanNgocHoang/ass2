@@ -224,11 +224,11 @@
                 <td><button class = "btn btn-success" name="Sum3">SUM</button></td>
                 <td>
                     <label>From</label>
-                    <input type="date" name="datefrom">
+                    <input type="date" name="datefrom3">
                 </td>
                 <td>
                     <label>To</label>
-                    <input type="date" name="dateto">
+                    <input type="date" name="dateto3">
                 </td>
                 </tr>
         </table>
