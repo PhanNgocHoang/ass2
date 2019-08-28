@@ -90,8 +90,8 @@
             <label>Store</label>
                 <select name="store" class="nhap">
                     <option value="store1">Store 1</option>
-                    <option value="store1">Store 2</option>
-                    <option value="store1">Store 3</option>
+                    <option value="store2">Store 2</option>
+                    <option value="store3">Store 3</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" name ="submit">Submit</button>
