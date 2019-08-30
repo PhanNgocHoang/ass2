@@ -48,8 +48,6 @@
                 $id1 = $row['id'];
                 $namepr = $row['namepr'];
                 $price = $row['price'];
-            }
-            echo $price;
         ?>
 
     <div class="container bg-info">
@@ -62,7 +60,7 @@
             </div>
             <div>
                 <label>Price</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" value="<?php echo $price;?>" name="price" required>
+                <input type="money" class="form-control nhap"  placeholder="Enter price of product" value="<?php echo $price;?>" name="price" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="edit">Edit</button>
         </form>
