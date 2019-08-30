@@ -41,8 +41,7 @@
     <?php
    include_once "connect.php"; 
     if(!isset($_POST['submit']))
-    {
-    }
+    {}
     else
     {
         $namepr = $_POST['nameprd'];
