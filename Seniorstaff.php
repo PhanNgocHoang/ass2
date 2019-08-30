@@ -141,19 +141,21 @@
         <?php
          if(!isset($_POST['Sum2']))
          {
- 
          }
          else
          {  
             $from2 = $_POST['datefrom2'];
             $to2 = $_POST['dateto2'];
-            $sql2 = "SELECT SUM(price) FROM orderpr WHERE  orderpr.store = 'store2' AND dateb BETWEEN '$from2' AND '$to2'";
+            $sql2 = "SELECT SUM(price) FROM orderpr 
+            WHERE  orderpr.store = 'store2' 
+            AND dateb BETWEEN '$from2' AND '$to2'";
             $stmt2 = $pdo->prepare($sql2);
             $stmt2->execute();
             $stmt2->setFetchMode(PDO::FETCH_ASSOC);
             $result2 = $stmt2->fetch();
             foreach($result2 as $row2){
-                echo"Total sales of Store 2 from: ".$from2."To: ".$to2." is". " ". $row2;}
+                echo"Total sales of Store 2 from: ".$from2.
+                "To: ".$to2." is". " ". $row2;}
         }
         ?>
             <tr>
