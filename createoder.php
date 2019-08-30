@@ -51,7 +51,8 @@
         $store = $_POST['store'];
         $date = $_POST['date'];
         $phone = $_POST['csphone'];
-        $sql = "insert into orderpr (customer, csphone, product, price, dateb, store) values (:customer, :phone, :namepr, :pay, :date, :store)";
+        $sql = "insert into orderpr (customer, csphone, product, price, dateb, store) 
+        values (:customer, :phone, :namepr, :pay, :date, :store)";
         $query = $pdo->prepare($sql);     
         $query->bindparam(':customer', $namect);
         $query->bindparam(':phone', $phone);
@@ -60,7 +61,14 @@
         $query->bindparam(':date', $date);
         $query->bindparam(':store', $store);
         $query->execute();
-        echo'<script language="javascript">alert("Create order successfully");</script>';
+        if($pdo->exec($query)==TRUE)
+        {
+            echo'<script language="javascript">alert("Create order successfully");</script>';  
+        }
+        else
+        {
+            echo'<script language="javascript">alert("Create order fail!");</script>';
+        }
     }
    ?>
     <div class="container bg-info">

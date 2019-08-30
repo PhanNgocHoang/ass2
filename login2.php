@@ -56,29 +56,32 @@
     
 </body>
 <?php 
-    require_once "connect.php";
-    if(!isset($_POST['login']))
+    require_once "connect.php";//connect to database
+    if(!isset($_POST['login']))//check users click login button
     {
-
     }
     else{
         $sql = "SELECT * FROM store where usernamestore = :usernamestore and pass = :pass";
         $stmt = $pdo->prepare($sql);
         $stmt->execute
         (
-        array(
+        array(//Assign value, username and password into the query
             'usernamestore' => $_POST['username'],
             'pass' => $_POST['pass'],
             )
-        );
+        );//running queries
+        //return query results to number of lines with 
+        //username and password is the same as the value that the user enters
         $count = $stmt->rowCount();
         if($count > 0)
         {   
-            $_SESSION['username'] = $_POST['username'];
-            echo'<script language="javascript">alert("Login sucessfully"); window.location="Store.php";</script>';
+            $_SESSION['username'] = $_POST['username'];//create session for account 
+            //and switch users to page Store
+            echo'<script language="javascript">alert("Login sucessfully"); 
+            window.location="Store.php";</script>';
         
          }
-        else
+        else//no account coincides with username and password that user input
         {
             echo'<script language="javascript">alert("Uesername or password incorrect");</script>';
         }

@@ -45,39 +45,38 @@
             <h1 style="text-align: center">Add Product</h1>
             <div>
                 <label>Name of product</label>
-                <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="name" required>
+                <input type="text" class="form-control nhap"  
+                placeholder="Enter name of product" name="name" required>
             </div>
             <div>
                 <label>Price</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="price" required>
+                <input type="number" class="form-control nhap"  
+                placeholder="Enter price of product" name="price" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="submit">Submit</button>
         </form>
     </div>
    <?php
-   include_once "connect.php"; 
-    if(!isset($_POST['submit']))
-    {
-    }
+   include_once "connect.php";//connect database
+    if(!isset($_POST['submit']))//check user click button submit
+    {}
     else
-    {
+    {   //take data of product that user import to check product on database
         $namepr = $_POST['name'];
         $price = $_POST['price'];
         $sql = "SELECT * FROM product where namepr = :name";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute
-        (
+        $stmt->execute(
             array(
                 'name' => $namepr,
             )
         );
         $count = $stmt->rowCount();
-        if($count > 0)
+        if($count > 0)//product is already in the database
         {   
-           echo'<script language="javascript">alert("Product already exists");</script>';
-            
+           echo'<script language="javascript">alert("Product already exists");</script>';   
         }
-        else
+        else//product is not yet in the database then add product
         {
             $sql = "insert into product(namepr, price) values (:name, :price)";
             $query = $pdo->prepare($sql);
